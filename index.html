@@ -1,64 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sign Up</title>
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">      
     <!-- Boxicons CSS -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
                     
 </head>
+
 <body>
-    <!-- Login form | connected using login.php and registration.php -->
-
-    <!--start of login form-->
-    <section class="container forms">
-        <div class="form login">
-            <div class="form-content">
-                <header>Login</header>
-                <form action="login.php" method="post">
-                    <div class="field input-field">
-                        <input type="email" placeholder="Email" class="input" name="email">
-                    </div>
-
-                    <div class="field input-field">
-                        <input type="password" placeholder="Password" class="password" name="password">
-                        <i class='bx bx-hide eye-icon'></i>
-                    </div>
-
-                    <div class="form-link">
-                        <a href="#" class="forgot-pass">Forgot password?</a>
-                    </div>
-
-                    <div class="field button-field">
-                        <button type="submit" class="btn" name="login_user">Login</button>
-                    </div>
-                </form>
-
-                <div class="form-link">
-                    <span>Don't have an account? <a href="#" class="link signup-link">Signup</a></span>
-                </div>
-            </div>
-
-            <div class="line"></div>
-
-            <div class="media-options">
-                <a href="#" class="field google">
-                    <img src="images/google.png" alt="" class="google-img">
-                    <span><button onclick="signIn()">Sign In with Google</button></span>
-                </a>
-            </div>
-
-        </div>
-
         <!-- Signup Form -->
-
-        <div class="form signup">
+    <section class="container forms">
+        <div class="form">
             <div class="form-content">
                 <header>Signup</header>
-                <form action="registration.php" method="post" novalidate>
+                <form action="registration.php" method="post">
                     <div class="field input-field">
                         <input type="text" placeholder="Username" class="input" name="username">
                     </div>
@@ -81,7 +42,7 @@
                 </form>
 
                 <div class="form-link">
-                    <span>Already have an account? <a href="#" class="link login-link">Login</a></span>
+                    <span>Already have an account? <a href="login.php">Login</a></span>
                 </div>
             </div>
 
@@ -90,12 +51,11 @@
             <div class="media-options">
                 <a href="#" class="field google">
                     <img src="images/google.png" alt="" class="google-img">
-                    <span>Login with Google</span>
+                    <span><button onclick="signIn()">Sign In with Google</button></span>
                 </a>
             </div>
         </div>
-    </section>
-
+    </section>    
     <!-- JavaScript -->
     <script src="js/script.js"></script>
 </body>
