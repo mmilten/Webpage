@@ -4,27 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<body>
     <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
-                
+    <link rel="stylesheet" href="css/style.css">      
     <!-- Boxicons CSS -->
-    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
                     
 </head>
 <body>
+    <!-- Login form | connected using login.php and registration.php -->
+
+    <!--start of login form-->
     <section class="container forms">
         <div class="form login">
             <div class="form-content">
                 <header>Login</header>
-                <form action="#">
+                <form action="login.php" method="post">
                     <div class="field input-field">
-                        <input type="email" placeholder="Email" class="input">
+                        <input type="email" placeholder="Email" class="input" name="email">
                     </div>
 
                     <div class="field input-field">
-                        <input type="password" placeholder="Password" class="password">
+                        <input type="password" placeholder="Password" class="password" name="password">
                         <i class='bx bx-hide eye-icon'></i>
                     </div>
 
@@ -47,7 +47,7 @@
             <div class="media-options">
                 <a href="#" class="field google">
                     <img src="images/google.png" alt="" class="google-img">
-                    <span>Login with Google</span>
+                    <span><button onclick="signIn()">Sign In with Google</button></span>
                 </a>
             </div>
 
@@ -58,17 +58,20 @@
         <div class="form signup">
             <div class="form-content">
                 <header>Signup</header>
-                <form action="#">
+                <form action="registration.php" method="post" novalidate>
                     <div class="field input-field">
-                        <input type="email" placeholder="Email" class="input">
+                        <input type="text" placeholder="Username" class="input" name="username">
+                    </div>
+                    <div class="field input-field">
+                        <input type="email" placeholder="Email" class="input" name="email">
                     </div>
 
                     <div class="field input-field">
-                        <input type="password" placeholder="Create password" class="password">
+                        <input type="password" placeholder="Create password" class="password" name="password">
                     </div>
 
                     <div class="field input-field">
-                        <input type="password" placeholder="Confirm password" class="password">
+                        <input type="password" placeholder="Confirm password" class="password" name="repeat_password">
                         <i class='bx bx-hide eye-icon'></i>
                     </div>
 
@@ -90,14 +93,10 @@
                     <span>Login with Google</span>
                 </a>
             </div>
-
         </div>
     </section>
 
     <!-- JavaScript -->
     <script src="js/script.js"></script>
-</body>
-</html>
-    
 </body>
 </html>
