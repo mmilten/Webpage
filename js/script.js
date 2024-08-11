@@ -42,7 +42,7 @@ function signIn() {
     // Parameters to pass to OAuth 2.0 endpoint.
     var params = {
         'client_id': '489676956233-aadsc1iqb6v7p4jdrl9ldgjrrsiccb8c.apps.googleusercontent.com',
-        'redirect_uri': 'https://688d-71-244-159-124.ngrok-free.app/webpage/index.php',
+        'redirect_uri': 'https://carefully-exotic-vervet.ngrok-free.app/webpage/index.php',
         'response_type': 'token',
         'scope': 'https://www.googleapis.com/auth/drive.metadata.readonly',
         'include_granted_scopes': 'true',
