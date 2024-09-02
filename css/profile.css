@@ -1,0 +1,100 @@
+    /* General Styles */
+    body {
+        font-family: "Reem Kufi Ink", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: whitesmoke;
+    }
+
+    /* Profile Section */
+    .profile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 100px;
+        /* Adjust depending on navbar height */
+    }
+
+    .profile_form {
+        background-color: whitesmoke;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        max-width: 800px;
+        /* Increase max-width to make the form wider */
+        width: 100%;
+        text-align: center;
+    }
+
+    .profile_content h1 {
+        margin-bottom: 20px;
+        font-size: 28px;
+        color: #4e64a1;
+        text-transform: uppercase;
+    }
+
+    /* Username and Email Display */
+    .profile_content p {
+        font-size: 18px;
+        color: #333;
+        margin-bottom: 30px;
+    }
+
+    /* Table Styles */
+    table {
+        width: 100%;
+        max-width: 750px;
+        /* Ensure the table does not exceed the container width */
+        margin: 0 auto;
+        /* Center the table within the form */
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    table th,
+    table td {
+        padding: 15px 20px;
+        /* Increase padding for larger table cells */
+        border: 1px solid #ddd;
+        text-align: left;
+        color: #555;
+    }
+
+    table th {
+        background-color: #4e64a1;
+        color: #ffffff;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    table tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+
+    table img {
+        border-radius: 50%;
+        max-width: 50px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .profile_form {
+            width: 90%;
+            padding: 15px;
+        }
+
+        .profile_content h1 {
+            font-size: 24px;
+        }
+
+        table {
+            max-width: 100%;
+            margin-top: 15px;
+        }
+
+        table th,
+        table td {
+            padding: 10px 12px;
+        }
+    }
