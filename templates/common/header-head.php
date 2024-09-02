@@ -10,5 +10,3 @@
 <style>
     <?php include('../css/header.css'); ?>
 </style>
-
-/** Testing comments changes for this repository */

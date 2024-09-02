@@ -5,7 +5,7 @@ $gClient = new Google\Client();
 
 //Required, call the setAutoConfig functon to load authorization credientials from
 //client_secret.json file.
-$gClient->setAuthConfig('../json/client.json');
+$gClient->setAuthConfig('../json/client_secret.json');
 
 // Required, to set the scope value, call the addScope function
 $gClient->addScope('https://www.googleapis.com/auth/userinfo.email', 'https://www.googleapis.com/auth/plus.login');
