@@ -45,7 +45,7 @@ if ($stmt->execute()) {
 } else {
 
     if ($mysqli->errno === 1062) {
-        die("email already taken");
+        die("The email already taken");
     } else {
         die($mysqli->error . " " . $mysqli->errno);
     }
