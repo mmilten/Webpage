@@ -12,9 +12,9 @@ This webpage is for testing purposes only and not for production
 
 ### Authentication with OAuth ###
 
-> An example of this can be seen in [`examples/simple-file-upload.php`](examples/simple-file-upload.php).
+> An example of this can be seen in [google-api-php-client/examples/simple-file-upload.php](https://github.com/googleapis/google-api-php-client/blob/main/examples/simple-file-upload.php).
 
-1. Follow the instructions to [Create Web Application Credentials](docs/oauth-web.md#create-authorization-credentials)
+1. Follow the instructions to [Create Web Application Credentials](https://github.com/googleapis/google-api-php-client/blob/main/docs/oauth-web.md#create-authorization-credentials)
 1. Download the JSON credentials
 1. Set the path to these credentials using `Google\Client::setAuthConfig`:
 
