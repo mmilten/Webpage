@@ -10,15 +10,14 @@ function renderNavbar($isLoggedIn, $logoutLink)
 
     // Search bar
     echo '
-        <form class="searchbar" action="#" method="GET">
+        <form class="searchbar" action="#" method="POST">
             <input type="text" name="query" placeholder="Search..." required>
             <button type="submit">Search</button>
         </form>';
 
     echo '
         <nav class="navbar">
-            <a href="#">Home</a>
-            <a href="#">About</a>';
+        ';
 
     if ($isLoggedIn) {
         echo '
