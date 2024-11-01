@@ -23,7 +23,7 @@ include('session.php');
         }
         ?>
 
-        <!-- Display Search Results or No Results Message in the middle -->
+        <!-- Display Search Results or No Results Message -->
         <div class="search-results">
             <?php
             if (isset($_POST["submit"]) && !empty($_POST["search"])) {

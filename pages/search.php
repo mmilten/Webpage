@@ -21,30 +21,31 @@ if (isset($_POST["submit"]) && !empty($_POST["search"])) {
     $sth->execute();
 
     // Display the results
+    // Display the results
     if ($sth->rowCount() > 0) {
         echo "<h2>Search Results for: " . htmlspecialchars($searchTerm) . "</h2>";
         echo "<table border='1'>
-                <tr>
-                    <th>Title</th>
-                    <th>Rating</th>
-                    <th>Reviews</th>
-                    <th>Phone</th>
-                    <th>Industry</th>
-                    <th>Address</th>
-                    <th>Website</th>
-                    <th>Google Maps Link</th>
-                </tr>";
+            <tr>
+                <th>Title</th>
+                <th>Rating</th>
+                <th>Reviews</th>
+                <th>Phone</th>
+                <th>Industry</th>
+                <th>Address</th>
+                <th>Website</th>
+                <th>Google Maps Link</th>
+            </tr>";
         while ($row = $sth->fetch()) {
             echo "<tr>
-                    <td>" . htmlspecialchars($row->Title) . "</td>
-                    <td>" . htmlspecialchars($row->Rating) . "</td>
-                    <td>" . htmlspecialchars($row->Reviews) . "</td>
-                    <td>" . htmlspecialchars($row->Phone) . "</td>
-                    <td>" . htmlspecialchars($row->Industry) . "</td>
-                    <td>" . htmlspecialchars($row->Address) . "</td>
-                    <td><a href='" . htmlspecialchars($row->Website) . "'>Visit Website</a></td>
-                    <td><a href='" . htmlspecialchars($row->GoogleMapsLink) . "'>View on Google Maps</a></td>
-                  </tr>";
+                <td>" . htmlspecialchars($row->Title) . "</td>
+                <td>" . htmlspecialchars($row->Rating) . "</td>
+                <td>" . htmlspecialchars($row->Reviews) . "</td>
+                <td>" . htmlspecialchars($row->Phone) . "</td>
+                <td>" . htmlspecialchars($row->Industry) . "</td>
+                <td>" . htmlspecialchars($row->Address) . "</td>
+                <td>" . (empty($row->Website) ? '' : "<a href='" . htmlspecialchars($row->Website) . "'>Visit Website</a>") . "</td>
+                <td>" . (empty($row->GoogleMapsLink) ? '' : "<a href='" . htmlspecialchars($row->GoogleMapsLink) . "'>View on Google Maps</a>") . "</td>
+              </tr>";
         }
         echo "</table>";
     } else {
