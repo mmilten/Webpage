@@ -10,9 +10,9 @@ function renderNavbar($isLoggedIn, $logoutLink)
 
     // Search bar
     echo '
-        <form class="searchbar" action="#" method="POST">
-            <input type="text" name="query" placeholder="Search..." required>
-            <button type="submit">Search</button>
+        <form class="searchbar" action="index.php" method="POST">
+            <input type="text" name="search" placeholder="Search..." required>
+            <button type="submit" name="submit">Search</button>
         </form>';
 
     echo '
