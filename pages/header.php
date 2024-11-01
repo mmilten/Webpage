@@ -24,7 +24,7 @@ function renderNavbar($isLoggedIn, $logoutLink)
             <div class="dropdown">
                 <button class="dropbtn">Menu +</button>
                 <div class="dropdown-content">
-                    <a href="#">Profile</a>
+                    <a href="?view=profile">Profile</a> <!-- Profile link with query parameter -->
                     <a href="' . $logoutLink . '">Logout</a>
                 </div>
             </div>';

@@ -1,3 +1,8 @@
+body {
+    margin-top: 60px;
+    /* Adjust this value based on the height of your navigation bar */
+}
+
 .container {
     height: 100vh;
     display: flex;

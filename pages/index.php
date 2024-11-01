@@ -14,20 +14,27 @@ include('session.php');
 
 <body>
     <?php include('header.php'); ?>
-    <?php include('profile.php'); ?>
-
-    <!-- Display Search Results or No Results Message in the middle -->
-    <div class="search-results">
+    <!-- Display profile.php only when "view=profile" is in the URL -->
+    <div class="content">
         <?php
-        if (isset($_POST["submit"]) && !empty($_POST["search"])) {
-            include('search.php');
-            // Display the no results message if it's set
-            if (!empty($noResultsMessage)) {
-                echo $noResultsMessage;
-            }
+        // Check if the 'view' parameter is set to 'profile'
+        if (isset($_GET['view']) && $_GET['view'] === 'profile') {
+            include('profile.php'); // Include profile.php
         }
         ?>
-    </div>
+
+        <!-- Display Search Results or No Results Message in the middle -->
+        <div class="search-results">
+            <?php
+            if (isset($_POST["submit"]) && !empty($_POST["search"])) {
+                include('search.php');
+                // Display the no results message if it's set
+                if (!empty($noResultsMessage)) {
+                    echo $noResultsMessage;
+                }
+            }
+            ?>
+        </div>
 </body>
 
 </html>
