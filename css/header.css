@@ -20,7 +20,7 @@ header {
     align-items: center;
     justify-content: space-between;
     z-index: 1000;
-    height: 100px;
+    height: 200px;
 }
 
 header .logo {
@@ -28,30 +28,34 @@ header .logo {
     font-size: 25px;
     color: black;
     text-transform: uppercase;
+    display: flex;
+    align-items: center;
 }
 
 /* Search Bar */
 .header-center {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    flex: 1;
+    /* Allows the search bar to take flexible space */
     display: flex;
     align-items: center;
+    /* Centers vertically */
     justify-content: center;
-    height: 100%;
+    margin: 0 10px;
+    /* Adds spacing between the logo and dropdown */
 }
 
 .searchbar {
-    display: inline-flex;
+    top: 10px;
+    display: flex;
     padding-bottom: 25px;
     align-items: center;
     width: 100%;
-    max-width: 400px;
+    max-width: 500px;
 }
 
 .searchbar input {
     width: 100%;
-    padding: 6px 12px;
+    padding: 8px 12px;
     border: none;
     border-radius: 20px 0 0 20px;
     outline: none;
@@ -61,7 +65,7 @@ header .logo {
 }
 
 .searchbar button {
-    padding: 8px 15px;
+    padding: 8px 12px;
     border: none;
     background-color: #333;
     color: whitesmoke;
@@ -89,7 +93,7 @@ header .logo {
 .navbar a {
     font-size: 14px;
     color: black;
-    padding: 8px 12px;
+    padding: 10px 15px;
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -107,7 +111,7 @@ header .logo {
 .dropdown .dropbtn {
     font-size: 14px;
     color: black;
-    padding: 8px 12px;
+    padding: 10px 15px;
     background-color: inherit;
     border: none;
     cursor: pointer;
