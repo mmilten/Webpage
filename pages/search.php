@@ -50,6 +50,6 @@ if (isset($_POST["submit"]) && !empty($_POST["search"])) {
         echo "</table>";
     } else {
         // Set message if no results are found
-        $noResultsMessage = "<p>No results found for: " . htmlspecialchars($searchTerm) . "</p>";
+        $noResultsMessage = "<h2>No results found for: " . htmlspecialchars($searchTerm) . "</h2>";
     }
 }
