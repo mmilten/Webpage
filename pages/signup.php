@@ -3,10 +3,8 @@
 
 <head>
     <title>Sign Up</title>
-    <!-- CSS -->
     <?php require('../templates/common/header-head.php'); ?>
     <link rel="stylesheet" href="../css/style.css" type="text/css">
-    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js" defer></script>
     <script src="../js/validate.js" defer></script>
 </head>
 
@@ -46,7 +44,6 @@
         </div>
     </section>
 </body>
-
 <!-- JavaScript -->
 <script src="../js/eye.js"></script>
 

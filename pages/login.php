@@ -11,12 +11,10 @@
 <body>
     <?php require('header.php'); ?>
     <!-- Login form | connected using login.php-->
-    <!--start of login form-->
     <section class="container forms">
         <div class="form">
             <div class="form-content">
                 <h1 style="text-align: center" ;>Login</h1>
-
                 <?php if ($is_invalid): ?>
                     <em>Invalid login</em>
                 <?php endif; ?>
@@ -57,6 +55,5 @@
 </body>
 <!-- JavaScript -->
 <script src="../js/eye.js"></script>
-
 
 </html>

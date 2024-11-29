@@ -32,7 +32,7 @@ function renderNavbar($isLoggedIn, $logoutLink)
     // Add the toggle button inside the navbar
     echo '
             <button id="theme-toggle" class="theme-toggle">
-                <span class="theme-icon">🌞</span>
+                <i class="fa-solid fa-sun"></i>
             </button>';
 
     echo '

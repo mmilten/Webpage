@@ -1,22 +1,20 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const toggleButton = document.getElementById("theme-toggle");
-    const body = document.body;
-    const themeIcon = toggleButton.querySelector(".theme-icon");
+document.addEventListener("DOMContentLoaded", function () {
+    const themeToggle = document.getElementById("theme-toggle");
+    const icon = themeToggle.querySelector("i");
 
-    // Check for saved theme preference
     if (localStorage.getItem("theme") === "dark") {
-        body.classList.add("dark-mode");
-        themeIcon.textContent = "🌜";
+        document.body.classList.add("dark-mode");
+        icon.classList.replace("fa-sun", "fa-moon");
     }
 
-    toggleButton.addEventListener("click", function() {
-        body.classList.toggle("dark-mode");
-        if (body.classList.contains("dark-mode")) {
-            themeIcon.textContent = "🌜";
-            localStorage.setItem("theme", "dark");
+    themeToggle.addEventListener("click", function () {
+        document.body.classList.toggle("dark-mode");
+        const isDark = document.body.classList.contains("dark-mode");
+        if (isDark) {
+            icon.classList.replace("fa-sun", "fa-moon");
         } else {
-            themeIcon.textContent = "🌞";
-            localStorage.setItem("theme", "light");
+            icon.classList.replace("fa-moon", "fa-sun");
         }
+        localStorage.setItem("theme", isDark ? "dark" : "light");
     });
 });

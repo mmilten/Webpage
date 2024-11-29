@@ -52,7 +52,7 @@ body.dark-mode .line::before {
 }
 
 .container {
-    height: 130vh;
+    height: 120vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -189,7 +189,7 @@ a.google span {
     color: #bec4d3;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 768px) {
     .form {
         padding: 20px 10px;
     }

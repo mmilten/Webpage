@@ -18,6 +18,10 @@
     transition: color 0.3s ease;
 }
 
+.theme-toggle i {
+    font-size: 18px;
+}
+
 .theme-toggle:hover {
     transform: rotate(30deg);
     color: #007bff;
