@@ -14,7 +14,11 @@ function renderNavbar($isLoggedIn, $logoutLink)
             <button type="submit" name="submit">Search</button>
         </form>
 
-        <nav class="navbar">';
+        <nav class="navbar">
+            <div class="location-info">
+                <i class="fa-solid fa-location-dot"></i>
+                <span id="user-location">Fetching location</span>
+            </div>';
 
     if ($isLoggedIn) {
         echo '
@@ -49,6 +53,6 @@ if (isset($_SESSION["user_id"])) {
 }
 ?>
 
-
 <!-- JavaScript for Dark/Light Mode Toggle -->
 <script src="../js/darkmode.js"></script>
+<script src="../js/location.js"></script>

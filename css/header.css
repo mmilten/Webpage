@@ -7,6 +7,20 @@
     text-decoration: none;
 }
 
+.location-info {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    font-size: 14px;
+    color: black;
+}
+
+.location-info i {
+    margin-right: 5px;
+    color: #007bff;
+}
+
+
 /* Dark/Light Mode Toggle Button */
 .theme-toggle {
     background: transparent;
@@ -51,7 +65,7 @@ body.dark-mode .searchbar input {
 
 body.dark-mode .searchbar button {
     background-color: whitesmoke;
-    color:black
+    color: black
 }
 
 body.dark-mode .searchbar button:hover {

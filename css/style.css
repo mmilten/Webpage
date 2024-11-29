@@ -22,19 +22,8 @@ body.dark-mode .field input {
     border: 1px solid #4a4a4a;
 }
 
-/* Button Adjustments */
-body.dark-mode .field .btn {
-    background-color: #bb86fc;
+body.dark-mode span {
     color: #ffffff;
-}
-
-body.dark-mode .field .btn:hover {
-    background-color: #3700b3;
-}
-
-/* Links and Icons */
-body.dark-mode .form-link a {
-    color: #bb86fc;
 }
 
 body.dark-mode .eye-icon {
@@ -64,7 +53,7 @@ body.dark-mode .line::before {
     position: absolute;
     max-width: 450px;
     width: 100%;
-    padding: 30px;
+    padding: 40px;
     border-radius: 6px;
 }
 
@@ -191,7 +180,7 @@ a.google span {
 
 @media screen and (max-width: 768px) {
     .form {
-        padding: 20px 10px;
+        padding: 20px 20px;
     }
 }
 
