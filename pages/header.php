@@ -14,11 +14,6 @@ function renderNavbar($isLoggedIn, $logoutLink)
             <button type="submit" name="submit">Search</button>
         </form>
 
-        <!-- Dark/Light Mode Toggle -->
-        <button id="theme-toggle" class="theme-toggle">
-            <span class="theme-icon">🌞</span>
-        </button>
-        
         <nav class="navbar">';
 
     if ($isLoggedIn) {
@@ -33,6 +28,13 @@ function renderNavbar($isLoggedIn, $logoutLink)
     } else {
         echo '<a href="login.php">Login</a>';
     }
+
+    // Add the toggle button inside the navbar
+    echo '
+            <button id="theme-toggle" class="theme-toggle">
+                <span class="theme-icon">🌞</span>
+            </button>';
+
     echo '
         </nav>
     </header>';
@@ -47,28 +49,6 @@ if (isset($_SESSION["user_id"])) {
 }
 ?>
 
+
 <!-- JavaScript for Dark/Light Mode Toggle -->
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const toggleButton = document.getElementById("theme-toggle");
-        const body = document.body;
-        const themeIcon = toggleButton.querySelector(".theme-icon");
-
-        // Check for saved theme preference
-        if (localStorage.getItem("theme") === "dark") {
-            body.classList.add("dark-mode");
-            themeIcon.textContent = "🌜";
-        }
-
-        toggleButton.addEventListener("click", function() {
-            body.classList.toggle("dark-mode");
-            if (body.classList.contains("dark-mode")) {
-                themeIcon.textContent = "🌜";
-                localStorage.setItem("theme", "dark");
-            } else {
-                themeIcon.textContent = "🌞";
-                localStorage.setItem("theme", "light");
-            }
-        });
-    });
-</script>
+<script src="../js/darkmode.js"></script>

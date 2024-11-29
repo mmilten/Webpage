@@ -1,9 +1,58 @@
-body {
-    /* Adjust this value based on the height of your navigation bar */
+/* General Dark Mode for Body */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Adjust Container for Dark Mode */
+body.dark-mode .container {
+    background-color: #1e1e1e;
+}
+
+/* Form Adjustments */
+body.dark-mode .form {
+    background-color: #242424;
+    border: 1px solid #4a4a4a;
+}
+
+/* Input Fields in Dark Mode */
+body.dark-mode .field input {
+    background-color: #2a2a2a;
+    color: #ffffff;
+    border: 1px solid #4a4a4a;
+}
+
+/* Button Adjustments */
+body.dark-mode .field .btn {
+    background-color: #bb86fc;
+    color: #ffffff;
+}
+
+body.dark-mode .field .btn:hover {
+    background-color: #3700b3;
+}
+
+/* Links and Icons */
+body.dark-mode .form-link a {
+    color: #bb86fc;
+}
+
+body.dark-mode .eye-icon {
+    color: #bbbbbb;
+}
+
+/* Line Divider */
+body.dark-mode .line {
+    background-color: #4a4a4a;
+}
+
+body.dark-mode .line::before {
+    background-color: #1e1e1e;
+    color: #ffffff;
 }
 
 .container {
-    height: 100vh;
+    height: 130vh;
     display: flex;
     align-items: center;
     justify-content: center;

@@ -3,13 +3,12 @@
 
 <head>
     <title>Login</title>
-    <link rel="stylesheet" href="../css/style.css" type="text/css">
     <?php require('../templates/common/header-head.php'); ?>
+    <link rel="stylesheet" href="../css/style.css" type="text/css">
     <?php require('session.php'); ?>
 </head>
 
 <body>
-
     <?php require('header.php'); ?>
     <!-- Login form | connected using login.php-->
     <!--start of login form-->
@@ -57,6 +56,7 @@
     </section>
 </body>
 <!-- JavaScript -->
-<script src="../js/script.js"></script>
+<script src="../js/eye.js"></script>
+
 
 </html>
