@@ -6,25 +6,27 @@ function renderNavbar($isLoggedIn, $logoutLink)
 {
     echo '
     <header>
-        <a href="#" class="logo">LOGO</a>';
+        <a href="#" class="logo">LOGO</a>
 
-    // Search bar
-    echo '
+        <!-- Search bar -->
         <form class="searchbar" action="index.php" method="POST">
             <input type="text" name="search" placeholder="Search..." required>
             <button type="submit" name="submit">Search</button>
-        </form>';
+        </form>
 
-    echo '
-        <nav class="navbar">
-        ';
+        <!-- Dark/Light Mode Toggle -->
+        <button id="theme-toggle" class="theme-toggle">
+            <span class="theme-icon">🌞</span>
+        </button>
+        
+        <nav class="navbar">';
 
     if ($isLoggedIn) {
         echo '
             <div class="dropdown">
                 <button class="dropbtn">Menu +</button>
                 <div class="dropdown-content">
-                    <a href="#" id="profile-link">Profile</a> <!-- Profile link with an ID -->
+                    <a href="#" id="profile-link">Profile</a>
                     <a href="' . $logoutLink . '">Logout</a>
                 </div>
             </div>';
@@ -43,3 +45,30 @@ if (isset($_SESSION["user_id"])) {
 } else {
     renderNavbar(false, '');
 }
+?>
+
+<!-- JavaScript for Dark/Light Mode Toggle -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const toggleButton = document.getElementById("theme-toggle");
+        const body = document.body;
+        const themeIcon = toggleButton.querySelector(".theme-icon");
+
+        // Check for saved theme preference
+        if (localStorage.getItem("theme") === "dark") {
+            body.classList.add("dark-mode");
+            themeIcon.textContent = "🌜";
+        }
+
+        toggleButton.addEventListener("click", function() {
+            body.classList.toggle("dark-mode");
+            if (body.classList.contains("dark-mode")) {
+                themeIcon.textContent = "🌜";
+                localStorage.setItem("theme", "dark");
+            } else {
+                themeIcon.textContent = "🌞";
+                localStorage.setItem("theme", "light");
+            }
+        });
+    });
+</script>

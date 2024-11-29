@@ -7,6 +7,47 @@
     text-decoration: none;
 }
 
+/* Dark/Light Mode Toggle Button */
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover {
+    transform: rotate(30deg);
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: whitesmoke;
+}
+
+body.dark-mode header {
+    background-color: #333;
+    box-shadow: 0 5px 10px #000;
+}
+
+body.dark-mode .logo,
+body.dark-mode .navbar a,
+body.dark-mode .dropdown .dropbtn {
+    color: whitesmoke;
+}
+
+body.dark-mode .searchbar input {
+    background-color: #222;
+    color: whitesmoke;
+}
+
+body.dark-mode .dropdown-content {
+    background-color: #222;
+    box-shadow: 0 8px 16px #000;
+}
+
 /* Header Container */
 header {
     position: fixed;
