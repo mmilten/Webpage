@@ -43,8 +43,8 @@ if (isset($_POST["submit"]) && !empty($_POST["search"])) {
                 <td>" . htmlspecialchars($row->Phone) . "</td>
                 <td>" . htmlspecialchars($row->Industry) . "</td>
                 <td>" . htmlspecialchars($row->Address) . "</td>
-                <td>" . (empty($row->Website) ? '' : "<a href='" . htmlspecialchars($row->Website) . "'>Visit Website</a>") . "</td>
-                <td>" . (empty($row->GoogleMapsLink) ? '' : "<a href='" . htmlspecialchars($row->GoogleMapsLink) . "'>View on Google Maps</a>") . "</td>
+                <td>" . (empty($row->Website) ? '' : "<a href='" . htmlspecialchars($row->Website) . "' target='_blank'>Visit Website</a>") . "</td>
+                <td>" . (empty($row->GoogleMapsLink) ? '' : "<a href='" . htmlspecialchars($row->GoogleMapsLink) . "' target='_blank'>View on Google Maps</a>") . "</td>
               </tr>";
         }
         echo "</table>";
